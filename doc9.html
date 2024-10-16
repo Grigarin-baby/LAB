@@ -1,0 +1,21 @@
+<html>
+  <body>
+    Enter the string
+    <input
+      type="text"
+      id="txt"
+      onfocus="txt_color()"
+      onblur="txt_back_color()"
+    />
+    <script type="text/javascript">
+      function txt_color() {
+        document.getElementById("txt").style.color = "yellow";
+        document.getElementById("txt").style.background = "red";
+      }
+      function txt_back_color() {
+        document.getElementById("txt").style.color = "pink";
+        document.getElementById("txt").style.background = "green";
+      }
+    </script>
+  </body>
+</html>
