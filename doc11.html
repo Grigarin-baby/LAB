@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Find First January on Sunday</title>
+</head>
+<body>
+<h1>Find First January on Sunday</h1>
+<form>
+<label for="startYear">Start Year:</label>
+<input type="number" id="startYear">
+<br>
+<label for="endYear">End Year:</label>
+<input type="number" id="endYear">
+<br>
+<button type="submit" onclick="findSunday()">Find</button>
+</form>
+<script>
+function findSunday()
+{
+var startYear = document.getElementById("startYear").value;
+var endYear = document.getElementById("endYear").value;
+if(startYear <= endYear)
+{
+for (let year = startYear; year <= endYear; year++)
+{
+const date = new Date(year, 0, 1);
+if (date.getDay() === 0)
+{
+var flag = 1;
+document.write("1st of january "+year+" is sunday <br>");
+}
+}
+if (flag!=1)
+{alert("No years start with sunday within the given range.");
+}
+}
+else
+{alert("startyear must be <= endyear");
+}
+}
+</script>
+</body>
+</html>
